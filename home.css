@@ -1,0 +1,344 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+/* 
+*page name 眠貓咖啡屋 首頁
+*copyright 2024
+*author 余盈蓁 陳星璇
+*licensed
+*/
+body{
+    margin:0;
+    font-family: '微軟正黑體',arial;/* 新增字體設定 前面微軟正黑體為主要字體，後面為替補字體 */
+}
+/* 字體設定 */
+h1,h2{
+    font-family: "cwTeXFangSong", serif;
+}
+h3,h4,h5,h6 {
+    font-family: "微軟正黑體", serif;
+    font-weight: normal; /* 取消粗體 */
+}
+
+
+
+/* ------------------------- *\ 
+    Layout
+\* ------------------------- */
+
+.mask-dark{
+    /* 注意權重，以及遮罩寫的位置 */
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 首圖 */
+.first{
+    /* width: 1920px; */
+    height: 915px;
+    background-image: url("../images/home_first-v7.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* 以下是黃色東東的設定*/ 
+    display: flex;
+    align-self: end;
+
+    width:100%;
+    /* height: auto; */
+    /* width:min-content; */
+}
+.sth-yellow{
+    display: flex;
+    align-self: end;
+    width:100%;
+}
+/* header{
+    background-color: #04172A ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 165px;
+    
+} */
+
+
+/* ------------------------- *\ 
+    button 按鈕設定
+\* ------------------------- */
+
+/* 主要按鈕 深色底用 */
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    /* 文字設定 */
+    text-decoration:none;
+    color: white;
+    font-size: 34px;
+    /* 空間設定 */
+    line-height: 24px;
+    padding: 4px 16px;
+    border-radius: 100px;
+    /* 其他設定 */
+    transition: all 0.3s;
+}
+.btn.btn-primary{
+    border: 3px solid #FBFBFB;
+    color: white;
+}
+.btn.btn-primary:hover{
+    border-radius: 100px;
+    font-size: 34px;
+    background-color: #FBFBFB;
+    border: 2px solid #FBFBFB;
+    color: #022961;
+}
+.btn.btn-primary:active {
+    background-color: #b5b6bc; /* 被按下時改變背景顏色 */
+    border: 2px solid #FBFBFB;
+    transform: translateY(2px); /* 向下移動 */
+}
+/* 訂位區按鈕大小 設定 */
+.btn.btn-lg{
+    padding: 40px 100px;
+}
+
+
+/* 主要按鈕 淺色more底用 */
+.btn-setting-more{
+    display: inline-block;
+    vertical-align: top;
+    /* 文字設定 */
+    text-decoration:none;
+    color: #443226;
+    font-size: 24px;
+    /* 空間設定 */
+    line-height: 24px;
+    padding: 4px 16px;
+    border-radius: 18px;
+    /* 其他設定 */
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 設置陰影 */
+}
+.btn-setting-more.btn-more{
+    background-color: #F2E7C9;
+}
+.btn-setting-more.btn-more:hover{
+    background-color: #F3E896;
+}
+.btn-setting-more.btn-more:active{
+    background-color: #CABB93; /* 被按下時改變背景顏色 */
+    color: white;
+    transform: translateY(2px); /* 向下移動 */
+}
+/* more按鈕大小 設定 */
+.btn-setting-more.btn-moresize{
+    padding: 24px 55px;
+}
+
+/* ------------------------- *\ 
+    navbar 導覽列
+\* ------------------------- */
+
+
+.navbar{/* 導覽列大框架 */
+    height: 120px;/* 高度 */
+    background-color:rgba(4,23,42,0.85);/* 將hex色彩轉成rgba，最後一個數值為透明度 */
+    display: flex;
+    position: fixed;
+    z-index: 500;
+    width: 100%;
+    left: 0;
+    top: 0;
+    justify-content: space-between;/* logo 導覽按鈕左右分開 */
+    align-items: center;/* 居中對齊 */
+}
+
+/* 左側logo與title處 */
+
+.logontitle{/* logo & title */
+    display: flex;
+    align-items: center;
+}
+.logo img{/* logo圖 */
+    width: 80px;
+    height: 80px;
+    margin: 20px 30px 20px 60px;
+}
+.header-title{
+    margin:0;
+    margin-left: 20px;
+    color: #ffffff;
+    font-family: "cwTeXFangSong", serif;
+    font-weight: 400;
+}
+
+/* 右邊的導覽按鈕區 */
+
+.nav{/* 右邊的導覽按鈕框架 */
+    display: block;
+    color: white;
+    line-height: 24px;
+    padding: 20px 16px;
+    transition: color 0.3;
+    align-items: center;
+
+    padding-right: 50px;
+} 
+.nav-item{ /* 每個導覽按鈕的設定 */
+    /* 字設定 */
+    font-family: "cwTeXFangSong", serif;
+    font-size: 28px;
+    /* 空間設定 */
+    align-items: center;
+    display: inline; /*對物件本身 */
+    margin-right: 50px;
+    
+} 
+.nav-text{
+    color: #ffffff;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+.nav-text:hover{
+    color:#6ee7ff;
+}
+.nav-text:active{
+    color:#438e9d;
+    transform: translateY(2px);
+}
+
+
+/* ------------------------- *\ 
+    body 主內容
+\* ------------------------- */
+
+     /* ------------------------- *\ 
+          about 
+     \* ------------------------- */
+.about-specials{
+    background-image: url("../images/milkyway_about_specials.jpg");
+    
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.about-img{
+    margin-top: 30px;
+    border-radius: 18px;
+}
+.about{
+    color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-title{
+    margin-top: 216px;;
+}
+
+    /* ------------------------- *\ 
+        specials
+    \* ------------------------- */
+.specials{
+    color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.specials-title{
+    margin-top:216px;
+}
+
+
+/* ------------------------- *\ 
+    reservation 訂位連結區
+\* ------------------------- */
+
+
+.reservation {
+    color: #ffffff;
+    height: 610px;
+    background-image: url("../images/home_reservation.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* 讓遮罩層和文字層的定位生效 */
+}
+.reservation > *:not(.mask-dark) {
+    position: relative;
+    z-index: 2; /* 讓文字和按鈕位於遮罩層上方 */
+}
+
+.reservation-title{
+    margin-top:123px;
+}
+
+
+/* ------------------------- *\ 
+    map 地圖與資訊區
+\* ------------------------- */
+
+
+.map{
+    color:#ffffff;
+    background-color: #022961;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.map-title{
+    margin:0;
+    padding-top: 55px;
+}
+.contactngoogle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:50px
+}
+.contact-text{
+    line-height: 8px;
+    margin-right: 200px;
+}
+/* .googlemap{
+    margin-left: 10px;
+} */
+
+
+/* ------------------------- *\ 
+    footer 頁尾
+\* ------------------------- */
+
+
+footer{
+    background-color: #04172A;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;/* 居中對齊 */
+    padding:20px 20px 20px 60px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-item{
+    align-items: center;
+    display: inline; /*對物件本身 */
+    margin-right: 50px;
+}
